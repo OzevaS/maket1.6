@@ -22,7 +22,7 @@ const optimization = () => {
     return config;
 }
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = ext => isDev ? `${ext}/[name].${ext}` : `${ext}/[name].[hash].${ext}`
 
 const cssLoaders = extra => {
     const loaders = [
@@ -97,15 +97,15 @@ module.exports = {
                 use: {
                   loader: 'babel-loader',
                   options: babelOptions()
-                }
+                },
             },
             {
                 test: /\.css$/,
-                use: cssLoaders()
+                use: cssLoaders(),
             },
             {
                 test: /\.s[ac]ss$/,
-                use: cssLoaders('sass-loader')
+                use: cssLoaders('sass-loader'),
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
