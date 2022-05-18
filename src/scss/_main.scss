@@ -1,0 +1,60 @@
+//Основной контент
+@import '_scroll.scss';
+@import '_about-us.scss';
+@import '_repair-brands.scss';
+@import '_repair-services.scss';
+@import '_repair-sales.scss';
+
+.main {
+
+    &__block {
+      margin-bottom: 24px;
+    }
+
+    &__header {
+      display: flex;
+      margin-bottom: 24px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 32px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        padding-top: 42px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    &__title {
+      margin-right: auto;
+    }
+
+    &__title-section {
+      margin-bottom: 16px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__buttons-repair {
+      @include hidden;
+
+      @media only screen and (min-width: 1440px) {
+        width: auto;
+        @include visible;
+      }
+    }
+  
+    &__nav {
+      margin-bottom: 24px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 32px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        margin-bottom: 12px;
+      }
+    }
+  }

@@ -1,0 +1,23 @@
+//Миксины
+@import '_mixins.scss';
+
+//Подключение шрифтов
+@import '_fonts.scss';
+
+//Общие стили
+@import '_common.scss';
+
+//Модули
+@import '_modal.scss';
+
+//Стили слайдера
+@import '_swiper.scss';
+
+//Стили хэдера
+@import '_header.scss';
+
+//Стили основного контента
+@import '_main.scss';
+
+//Стили футера
+@import '_footer.scss';

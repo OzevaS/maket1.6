@@ -1,0 +1,26 @@
+@mixin -add-range($min, $max, $prop, $val) {
+	@if type-of($val) == 'string' {
+		$val: unquote($val);
+	}
+	@if $max == false {
+		@media only screen and (min-width: #{$min+1}) {
+			& {
+				#{$prop}: $val;
+			}
+		}
+	}
+	@else if $min == false or $min == 0px {
+		@media only screen and (max-width: #{$max}) {
+			& {
+				#{$prop}: $val;
+			}
+		}
+	}
+	@else {
+		@media only screen and (min-width: #{$min+1}) and (max-width: #{$max}) {
+			& {
+				#{$prop}: $val;
+			}
+		}
+	}
+}

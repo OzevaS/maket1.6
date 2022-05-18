@@ -1,0 +1,124 @@
+//Хэдер
+@import '_menu-drop.scss';
+
+.header {
+    height: 88px;
+    padding: 17px 0;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+  
+    &__block {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__burger-wrapper {
+      min-width: 40px;
+      min-height: 40px;
+    }
+
+    &__button-burger {
+      width: 40px;
+      height: 40px;
+      background-color: #FF3E79;
+      border-radius: 50%;
+
+      position: relative;
+
+      &.open {
+        position: fixed;
+        z-index: 6;
+
+        span::before {
+          display: none;
+        }
+      }
+
+      &::before, &::after, span::before {
+        content: "";
+        position: absolute;
+        left: 11px;
+        background: #FFFFFF;
+        border-radius: 1px;
+        height: 2px;
+        transition: all .3s ease-in-out;
+        transform: rotate(0deg);
+      }
+
+      &::before {
+        top: 12px;
+        left: 11px;
+        width: 18px;
+      }
+
+      &::after {
+        top: 19px;
+        left: 11px;
+        width: 10px;
+      }
+
+      span::before {
+        bottom: 12px;
+        left: 11px;
+        width: 18px;
+      }
+    }
+
+    &__separator {
+      height: 100%;
+      position: relative;
+
+      & {
+        min-width: 16px;
+      }
+
+      &:last-of-type {
+        min-width: 40px;
+        
+        &::before {
+          @include separator-line;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        width: 42px;
+
+        &::before {
+          @include separator-line;
+        }
+      }
+    }
+  
+    &__logo {
+      height: 100%;
+      margin-right: auto;
+  
+      img {
+        height: 100%;
+      }
+    }
+
+    &__buttons-services {
+      @include hidden;
+
+      @media only screen and (min-width: 768px) {
+        @include visible;
+      }
+		}
+
+    @media only screen and (min-width: 1440px) {
+      margin: 0;
+      padding: 0;
+      height: auto;
+
+      &__block {
+        padding: 0;
+        align-items: flex-start;
+      }
+
+      &__menu-drop ~ * {
+        display: none;
+      }
+    }
+  }

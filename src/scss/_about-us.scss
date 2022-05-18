@@ -1,0 +1,50 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  color: #1B1C21;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    height: 90px;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+  }
+
+  &__button-next {
+    margin: 16px 0 !important;
+  }
+
+  &__image {
+    position: relative;
+    left: -16px;
+    width: 100vw;
+  }
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    
+    &__wrapper, &__image {
+      width: 50%;
+    }
+
+    &__image {
+      position: static;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    &__text {
+      margin-right: 48px;
+    }
+
+    &__button-next {
+      margin: 10px 0 !important;
+    }
+  }
+}

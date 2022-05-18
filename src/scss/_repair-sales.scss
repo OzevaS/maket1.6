@@ -1,0 +1,198 @@
+.repair-sales {
+
+    &__swiper {
+      transform: rotate(0deg);
+      margin-bottom: 16px;
+  
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 24px;
+      }
+  
+      &::after {
+        height: 200px;
+      }
+    }
+  
+    &__header-grid {
+      display: none;
+  
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 23px 16px;
+      }
+    }
+  
+    &__header-service {
+      min-width: 348px;
+    }
+  
+    &__header-sale {
+      min-width: 74px;
+    }
+  
+    &__header-date {
+      min-width: 81px;
+    }
+  
+    &__header-widthfix {
+      width: 119px;
+    }
+  
+    &__description-sales {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #1B1C21;
+  
+      margin-bottom: 16px;
+    }
+  
+    &__commerc-order {
+      position: relative;
+  
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 12px;
+        right: -8px;
+        transform: translateY(75%) rotate(-45deg);
+        width: 7px;
+        height: 7px;
+        box-shadow: 2px 2px 0 0 #FF3E79;
+        background-color: transparent;
+      }
+    }
+  }
+  
+  .list-sales {
+    height: 228px;
+  
+    @media only screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      gap: 0;
+      background: #FFFFFF;
+      border-radius: 6px;
+    }
+  
+    &__row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 200px;
+      width: 260px;
+        
+      @media only screen and (min-width: 768px) {
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 23px 16px;
+        margin: 0;
+        border: none;
+
+        &:hover {
+          box-shadow: none;
+        }
+  
+        &:not(:last-of-type)::after {
+          content: "";
+          position: absolute;
+          left: 16px;
+          bottom: 0;
+          width: calc(100% - 32px);
+          height: 1px;
+          background: #EAEAEA;
+        }
+      }
+
+      @media only screen and (min-width: 1440px) {
+        padding: 23px 24px;
+      }
+    }
+
+    &__item {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      color: #1B1C21;
+
+      position: relative;
+
+      &::before {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #7E7E82;
+        opacity: 0.72;
+
+        @media only screen and (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  
+    &__service {
+      @media only screen and (min-width: 768px) {
+        min-width: 348px;
+      }
+  
+      &::before {
+        content: "Ремонтные услуги";
+      }
+    }
+  
+    &__sale {
+      @media only screen and (min-width: 768px) {
+        min-width: 74px;
+      }
+  
+      &::before {
+        content: "Цена";
+      }
+    }
+  
+    &__date {
+      @media only screen and (min-width: 768px) {
+        min-width: 81px;
+      }
+  
+      &::before {
+        content: "Срок";
+      }
+    }
+  
+    &__placeorder {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+  
+      @media only screen and (min-width: 768px) {
+        position: static;
+      }
+  
+      span {
+        @media only screen and (min-width: 768px) {
+          left: 0;
+        }
+      }
+  
+      &::after {
+        @media only screen and (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }

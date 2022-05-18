@@ -1,0 +1,49 @@
+.repair-services {
+
+    &__swiper {
+        transform: rotate(0deg);
+
+        &::after {
+            height: 160px;
+        }
+    }
+
+    &__button-next {
+        display: none;
+
+        @media only screen  and (min-width: 768px) {
+            display: block;
+        }
+    }
+}
+
+.list-services {
+    height: 188px;
+    position: relative;
+    box-sizing: border-box;
+
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+
+        height: 160px;
+        overflow: hidden;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__card {
+        display: block;
+        width: 224px;
+        height: 160px;
+
+        @media only screen and (min-width: 768px) {
+            width: auto;
+        }
+
+        @include button-arrow;
+    }
+}
