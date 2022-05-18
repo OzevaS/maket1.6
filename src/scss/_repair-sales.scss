@@ -25,6 +25,7 @@
   
     &__header-service {
       min-width: 348px;
+      color: $titlesection-color;
     }
   
     &__header-sale {
@@ -66,7 +67,7 @@
         transform: translateY(75%) rotate(-45deg);
         width: 7px;
         height: 7px;
-        box-shadow: 2px 2px 0 0 #FF3E79;
+        box-shadow: 2px 2px 0 0 $buttonlink-color;
         background-color: transparent;
       }
     }
@@ -96,7 +97,7 @@
         width: auto;
         flex-direction: row;
         align-items: center;
-        padding: 23px 16px;
+        padding: 16px 16px;
         margin: 0;
         border: none;
 
@@ -115,8 +116,8 @@
         }
       }
 
-      @media only screen and (min-width: 1440px) {
-        padding: 23px 24px;
+      @media only screen and (min-width: 1120px) {
+        padding: 16px 24px;
       }
     }
 
@@ -180,19 +181,9 @@
       bottom: 16px;
   
       @media only screen and (min-width: 768px) {
-        position: static;
-      }
-  
-      span {
-        @media only screen and (min-width: 768px) {
-          left: 0;
-        }
-      }
-  
-      &::after {
-        @media only screen and (min-width: 768px) {
-          display: none;
-        }
+        right: unset;
+        bottom: unset;
+        position: relative;
       }
     }
   }

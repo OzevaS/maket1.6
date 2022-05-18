@@ -46,4 +46,8 @@
 
         @include button-arrow;
     }
+
+    &__link {
+        font-weight: 500;
+    }
 }

@@ -75,7 +75,7 @@
         margin-bottom: auto;
 
         @media only screen and (min-width: 1440px) {
-            margin-bottom: 229px;
+            margin-bottom: 221px;
         }
     }
 
@@ -90,31 +90,30 @@
         position: relative;
 
         font-size: 16px;
+        font-weight: 600;
         line-height: 24px;
         letter-spacing: -0.2px;
-        color: #1B1C21;
-        font-weight: 500;
+        color: $textcontent-color;
         cursor: pointer;
 
         @media only screen and (min-width: 768px) {
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         &::before {
             content: "";
             position: absolute;
-            left: -18px + 1px;
+            left: -18px + 2px;
             top: -4px;
             width: 4px;
             height: 32px;
-            border-radius: 30%;
-            background: #41F6D7;
+            background: $highlight-color;
 
             transition: all .3s ease-in-out;
             transform: scale(0);
 
             @media only screen and (min-width: 768px) {
-                left: -25px;
+                left: -24px;
             }
         }
 
@@ -124,7 +123,7 @@
     }
 
     &__link--active {
-        color: #7E7E82;
+        color: $titlesection-color;
 
         &::before {
             transform: scale(1);
@@ -156,7 +155,7 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
-        color: #1B1C21;
+        color: $textcontent-color;
         font-weight: 500;
         margin-bottom: 12px;
     }
@@ -165,7 +164,7 @@
         font-size: 24px;
         line-height: 32px;
         letter-spacing: -0.6px;
-        color: #1B1C21;
+        color: $textcontent-color;
         font-weight: 700;
     }
 }
@@ -180,12 +179,12 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
-        color: #1B1C21;
+        color: $textcontent-color;
         text-transform: uppercase;
         font-weight: 500;
     }
 
     &__button--active {
-        color: #7E7E82;
+        color: $textli-color;
     }
 }

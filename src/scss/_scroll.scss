@@ -22,7 +22,7 @@
       height: 38px;
       list-style: none;
       transition: all .3s ease-in-out;
-      border-color: #B8FFEC;
+      border-color: $scrollactive-color;
       border-radius: 6px;
 
       &:last-child {
@@ -35,7 +35,7 @@
     }
 
     &__item--active {
-      box-shadow: inset 0 0 0px 2px #b8ffec;
+      box-shadow: inset 0 0 0px 2px $scrollactive-color;
       background: #FFFFFF;
     }
   

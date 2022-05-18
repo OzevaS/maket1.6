@@ -5,20 +5,18 @@
   }
   
   body {
-    background: #0a0909;
-
     &.scroll-off {
       height: 100%;
       overflow: hidden;
     }
   }
 
-  ul {
+  ul, ol {
     padding: 0;
     margin: 0;
   }
 
-  h1, h2 {
+  h1, h2, h3, h4, h5, h5 {
     margin: 0;
   }
 
@@ -83,7 +81,7 @@
     width: 40px;
     border-radius: 50%;
     transition-duration: 0.3s;
-    background-color: #ff3e79;
+    background-color: $buttonlink-color;
     font-size: 0;
   
     img {
@@ -91,7 +89,7 @@
     }
 
     &:hover {
-      box-shadow: 0 0 10px 0 #ff3e79;
+      box-shadow: 0 0 10px 0 $buttonlink-color;
     }
   }
 
@@ -141,7 +139,7 @@
     transition: all .3s ease-in-out;
 
     &:hover {
-      box-shadow: 0 0 10px 0 #ff3e79;
+      box-shadow: 0 0 10px 0 $buttonlink-color;
     }
 
     span {
@@ -204,7 +202,7 @@
       min-width: 4px;
       height: 40px;
       border-radius: 10px;
-      background: #41F6D7;
+      background: $highlight-color;
 
       @media only screen and (min-width: 768px) {
         left: -24px;
@@ -229,13 +227,13 @@
     line-height: 24px;
     letter-spacing: -0.2px;
     text-transform: uppercase;
-    color: #7E7E82;
+    color: $titlesection-color;
 
   }
 
   .button-next {
     position: relative;
-    color: #1B1C21;
+    color: $textcontent-color;
     font-size: 16px;
     letter-spacing: -0.2px;
     line-height: 24px;
