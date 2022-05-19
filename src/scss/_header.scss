@@ -19,16 +19,11 @@
     }
 
     &__button-burger {
-      width: 40px;
-      height: 40px;
-      background-color: $buttonlink-color;
-      border-radius: 50%;
-
       position: relative;
 
       &.open {
         position: fixed;
-        z-index: 6;
+        z-index: 5;
 
         span::before {
           display: none;
